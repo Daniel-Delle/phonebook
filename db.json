@@ -1,0 +1,50 @@
+{
+  "persons": [
+    {
+      "name": "Arto Hellas",
+      "number": "040-123456",
+      "id": "1"
+    },
+    {
+      "name": "Ada Lovelace",
+      "number": "39-44-5323523",
+      "id": "2"
+    },
+    {
+      "name": "Dan Abramov",
+      "number": "12-43-234345",
+      "id": "3"
+    },
+    {
+      "name": "Mary Poppendieck",
+      "number": "39-23-6423122",
+      "id": "4"
+    },
+    {
+      "name": "Abe Moses ",
+      "number": "39-456-26144",
+      "id": "SZLeR_2auM8"
+    },
+    {
+      "name": "Tony Glee",
+      "number": "55-4532-12-33",
+      "id": "qHHUExUww30"
+    },
+    {
+      "name": "Daniel Ezekiel",
+      "number": "295-65-7890-1",
+      "id": "r4-ZauOxphE"
+    },
+    {
+      "name": "Elijah Elisha",
+      "number": "345-567-1234",
+      "id": "ycrzrWSBRl4"
+    },
+    {
+      "name": "Peter  Abraham ",
+      "number": "234-464-13446",
+      "id": "3ibtfLWRtoA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
