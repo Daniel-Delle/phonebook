@@ -26,9 +26,15 @@ const updatePerson = (id, updatedPerson) => {
   return request.then((response) => response.data);
 };
 
+const editPerson = (id) => {
+  const request = axios.get(`${baseUrl}/${id}`);
+  return request.then((res) => res.data);
+};
+
 export default {
   getAll: getAll,
   createPerson: createPerson,
   deletePerson: deletePerson,
   updatePerson: updatePerson,
+  editPerson: editPerson
 };

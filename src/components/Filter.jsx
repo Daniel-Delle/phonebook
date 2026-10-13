@@ -1,6 +1,15 @@
 import backend from "../services/backend";
 
-function Filter({ type, onChange, filter, persons, setPersons }) {
+function Filter({
+  type,
+  onChange,
+  filter,
+  persons,
+  setPersons,
+  setNewNumber,
+  setNewName,
+  setEditingPersonId,
+}) {
   if (type === "input") {
     return (
       <div>
@@ -33,9 +42,18 @@ function Filter({ type, onChange, filter, persons, setPersons }) {
     return (
       <div>
         {filteredPersons.map((person) => (
-          <p key={person.name}>
-            {person.name} {person.number}{" "}
+          <p key={person.id}>
+            {person.name} {person.number}
             <button onClick={() => OnDelete(person)}>delete</button>
+            <button
+              onClick={() => {
+                setNewName(person.name);
+                setNewNumber(person.number);
+                setEditingPersonId(person.id);
+              }}
+            >
+              edit
+            </button>
           </p>
         ))}
       </div>

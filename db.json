@@ -44,6 +44,11 @@
       "name": "Peter  Abraham ",
       "number": "234-464-13446",
       "id": "3ibtfLWRtoA"
+    },
+    {
+      "name": "Alreda Johnson",
+      "number": "556-63-8367",
+      "id": "QblOmPdxFgs"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

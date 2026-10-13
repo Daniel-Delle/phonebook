@@ -11,6 +11,7 @@ function App() {
   const [filter, setFilter] = useState("");
   const [successMsg, setSuccessMsg] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
+  const [editingPersonId, setEditingPersonId] = useState(null);
 
   const [persons, setPersons] = useState([]);
 
@@ -59,6 +60,8 @@ function App() {
         setNewNumber={setNewNumber}
         setSuccessMsg={setSuccessMsg}
         setErrorMsg={setErrorMsg}
+        setEditingPersonId={setEditingPersonId}
+        editingPersonId={editingPersonId}
       />
 
       <h2>Numbers</h2>
@@ -69,6 +72,9 @@ function App() {
         persons={persons}
         filter={filter}
         setPersons={setPersons}
+        setNewNumber={setNewNumber}
+        setNewName={setNewName}
+        setEditingPersonId={setEditingPersonId}
       />
     </div>
   );
