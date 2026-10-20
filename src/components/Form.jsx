@@ -14,6 +14,7 @@ function Form({
   editingPersonId,
   setEditingPersonId,
 }) {
+  const validator = /^ *\+?\d[0-9 -]*$/;
   // setting message that shows new name added or updated to null
   const successMsgTimeout = setTimeout(() => {
     setSuccessMsg(null);
@@ -30,6 +31,12 @@ function Form({
       name: newName,
       number: newNumber,
     };
+
+    // number validation
+    if (!validator.test(newNumber)) {
+      alert("Invalid input ");
+      return;
+    }
 
     // updating an existing person
     if (editingPersonId !== null) {
@@ -58,6 +65,10 @@ function Form({
     }
 
     // creating a new person in the phonebook
+    // const cleanNewNumber = setNewNumber(newNumber.replace(/-/g, ""));
+    // console.log(newNumber);
+    
+
     backend.createPerson(newPerson).then((createdPerson) => {
       setPersons(persons.concat(createdPerson));
       setNewName("");
